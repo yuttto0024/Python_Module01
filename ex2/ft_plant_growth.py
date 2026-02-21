@@ -34,13 +34,14 @@ class Plant:
         print(f"{self.name}: {self.height}cm {self.days_old} days old")
 
 
-plant1 = ["Rose", 25, 30]
-my_plant = Plant(*plant1)
-print("=== Day 1 ===")
-my_plant.output()
-for _ in range(6):
-    my_plant.age()
-    my_plant.grow()
-print("=== Day 7 ===")
-my_plant.output()
-print(f"Growing this week: +6cm")
+if __name__ == "__main__":
+    plant1 = ["Rose", 25, 30]
+    my_plant = Plant(*plant1)
+    print("=== Day 1 ===")
+    my_plant.output()
+    for _ in range(6):
+        my_plant.age()
+        my_plant.grow()
+    print("=== Day 7 ===")
+    my_plant.output()
+    print("Growing this week: +6cm")

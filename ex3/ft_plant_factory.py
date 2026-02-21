@@ -22,16 +22,17 @@ class Plant:
         print(f"Created: {self.name} ({self.init_h}cm, {self.init_age} days)")
 
 
-plant1 = ("Rose", 25, 30)
-plant2 = ("Oak", 200, 365)
-plant3 = ("Rose", 5, 90)
-plant4 = ("Rose", 80, 45)
-plant5 = ("Rose", 15, 120)
-all_plant = [plant1, plant2, plant3, plant4, plant5]
-i = 0
-print("=== Plant Factory Output ===")
-for data in all_plant:
-    my_plant = Plant(*data)
-    my_plant.get_info()
-    i += 1
-print(f"Total plants created: {i}")
+if __name__ == "__main__":
+    plant1 = ("Rose", 25, 30)
+    plant2 = ("Oak", 200, 365)
+    plant3 = ("Rose", 5, 90)
+    plant4 = ("Rose", 80, 45)
+    plant5 = ("Rose", 15, 120)
+    all_plant = [plant1, plant2, plant3, plant4, plant5]
+    i = 0
+    print("=== Plant Factory Output ===")
+    for data in all_plant:
+        my_plant = Plant(*data)
+        my_plant.get_info()
+        i += 1
+    print(f"Total plants created: {i}")
