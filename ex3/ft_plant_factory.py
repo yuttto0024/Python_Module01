@@ -35,4 +35,5 @@ if __name__ == "__main__":
         my_plant = Plant(*data)
         my_plant.get_info()
         i += 1
+    print("------------------------------")
     print(f"Total plants created: {i}")

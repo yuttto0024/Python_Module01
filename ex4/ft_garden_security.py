@@ -7,7 +7,7 @@ class SecurePlant:
         __height (int): The plant's height in cm (private).
         __age (int): The plant's age in days (private).
     """
-    def __init__(self, name: str, height: int, age: int):
+    def __init__(self, name: str, height: int, age: int) -> None:
         """
         Sets up the plant with safe data.
 
@@ -42,7 +42,7 @@ class SecurePlant:
         else:
             print("Invalid operation attempted: "
                   f"age {new_age} days [REJECTED]")
-            print("Security: Neg ative age rejected")
+            print("Security: Negative age rejected")
 
     def get_name(self) -> str:
         """
@@ -65,7 +65,6 @@ class SecurePlant:
 
 if __name__ == "__main__":
     print("=== Garden Security System ===")
-    args = ("name", "height", "age")
     plant_dict = {
         "name": "Rose",
         "height": 10,

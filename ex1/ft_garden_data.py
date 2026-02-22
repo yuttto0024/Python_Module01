@@ -18,6 +18,7 @@ class Plant:
 
 
 if __name__ == "__main__":
+    print("=== Garden Plant Registry ===")
     plant1 = ("Rose", 25, 30)
     plant2 = ("Sunflower", 80, 45)
     plant3 = ("Cactus", 15, 120)
