@@ -114,7 +114,7 @@ class GardenManager:
                 self.plants_list
             )
         )
-        plant_count = len(self.plants_list)
+        plant_count = self.plants_list.__len__()
         print("-------------------------------------")
         print(f"Plants added: {plant_count}, "
               f"Total growth: {plant_total_growth}cm")
