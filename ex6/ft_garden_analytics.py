@@ -135,7 +135,7 @@ class GardenManager:
             score = 0
             for plant in garden.plants_list:
                 score += plant.height
-                if type(plant) is PrizeFlower:
+                if plant.__class__ is PrizeFlower:
                     score += plant.prize_points * 4
             gardens_score_list.append(f"{garden.owner_name}: {score}")
         print(", ".join(gardens_score_list))
@@ -166,7 +166,7 @@ class GardenManager:
                     PrizeFlower: 0
             }
             for plant in plants_list:
-                plant_type = type(plant)
+                plant_type = plant.__class__
                 if plant_type in count_dict:
                     count_dict[plant_type] += 1
             return (
