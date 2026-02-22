@@ -2,7 +2,10 @@ class Plant:
     """
     Superclass managing common plant attributes (name, height, age).
     """
-    def __init__(self, name: str, height: int, age: int):
+    def __init__(self, name: str, height: int, age: int) -> None:
+        """
+        Initialize a plant with a name, height, and age.
+        """
         self.name = name.capitalize()
         self.height = height
         self.age = age
@@ -13,11 +16,14 @@ class Flower(Plant):
     Subclass inheriting from Plant,
     with a color attribute and blooming behavior.
     """
-    def __init__(self, name: str, height: int, age: int, color: str):
+    def __init__(self, name: str, height: int, age: int, color: str) -> None:
+        """
+        Initialize a flower with an additional color attribute.
+        """
         super().__init__(name, height, age)
         self.color = color
 
-    def bloom(self):
+    def bloom(self) -> None:
         """
         Outputs the blooming state of the flower.
         """
@@ -29,11 +35,17 @@ class Tree(Plant):
     Subclass inheriting from Plant,
     with a trunk diameter and shade-producing behavior.
     """
-    def __init__(self, name: int, height: int, age: int, trunk_diameter: int):
+    def __init__(
+        self, name: str, height: int, age: int,
+        trunk_diameter: int
+    ) -> None:
+        """
+        Initialize a tree with an additional trunk diameter attribute.
+        """
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
 
-    def produce_shade(self):
+    def produce_shade(self) -> None:
         """
         Calculates and outputs the shade area based on the trunk diameter.
         """
@@ -50,12 +62,15 @@ class Vegetable(Plant):
     def __init__(
         self, name: str, height: int, age: int,
         harvest_season: str, nutritional_value: str
-    ):
+    ) -> None:
+        """
+        Initialize a vegetable with harvest season and nutritional value.
+        """
         super().__init__(name, height, age)
         self.harvest_season = harvest_season
         self.nutritional_value = nutritional_value
 
-    def get_nutritional_values(self):
+    def get_nutritional_values(self) -> None:
         """
         Outputs information about the nutrients abundant in the vegetable.
         """
@@ -63,7 +78,7 @@ class Vegetable(Plant):
 
 
 if __name__ == "__main__":
-    print("=== garden Plant Types ===")
+    print("=== Garden Plant Types ===")
     flower_data_list = [
         ("Rose", 25, 30, "red"),
         ("Sunflower", 150, 60, "yellow")
@@ -73,7 +88,7 @@ if __name__ == "__main__":
         print(f"{flower.name} (Flower): "
               f"{flower.height}cm, {flower.age} days, {flower.color} color")
         flower.bloom()
-    print("--------------------------")
+    print("------------------------------")
     tree_data_list = [
         ("Oak", 500, 1825, 50),
         ("Pine", 800, 3650, 40)
@@ -83,7 +98,7 @@ if __name__ == "__main__":
         print(f"{tree.name} (Tree): "
               f"{tree.height}cm, {tree.age} days, {tree.trunk_diameter}")
         tree.produce_shade()
-    print("--------------------------")
+    print("------------------------------")
     vegetable_data_list = [
         ("Tomato", 80, 90, "summer", "vitamin C"),
         ("corn", 80, 90, "summer", "vitamin E")
