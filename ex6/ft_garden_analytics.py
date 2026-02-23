@@ -138,14 +138,14 @@ class GardenManager:
                 if plant.__class__ is PrizeFlower:
                     score += plant.prize_points * 4
             gardens_score_list.append(f"{garden.owner_name}: {score}")
-        print(", ".join(gardens_score_list))
+        print(*gardens_score_list, sep=", ")
 
     class GardenStats:
         """
         Nested helper class providing analytics and calculations.
         """
         @staticmethod
-        def calculate_total_growth(plants_list) -> int:
+        def calculate_total_growth(plants_list: list) -> int:
             """
             Calculate the total growth amount across a list of plants.
             """
@@ -156,7 +156,7 @@ class GardenManager:
             return plant_total_growth
 
         @staticmethod
-        def count_plant_types(plants_list) -> tuple:
+        def count_plant_types(plants_list: list) -> tuple:
             """
             Count the occurrences of each plant type in a given list.
             """

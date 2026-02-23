@@ -6,7 +6,7 @@ class Plant:
         """
         Initialize a plant with a name, height, and age.
         """
-        self.name = name.capitalize()
+        self.name = name
         self.height = height
         self.age = age
 
@@ -49,8 +49,7 @@ class Tree(Plant):
         """
         Calculates and outputs the shade area based on the trunk diameter.
         """
-        shade_radius_m = self.trunk_diameter / 10
-        shade_area = int(3.14 * (shade_radius_m ** 2))
+        shade_area = (314 * (self.trunk_diameter ** 2)) // 10000
         print(f"{self.name} provides {shade_area} square meters of shade")
 
 
@@ -96,7 +95,8 @@ if __name__ == "__main__":
     for data in tree_data_list:
         tree = Tree(*data)
         print(f"{tree.name} (Tree): "
-              f"{tree.height}cm, {tree.age} days, {tree.trunk_diameter}")
+              f"{tree.height}cm, {tree.age} days, "
+              f"{tree.trunk_diameter}cm diameter")
         tree.produce_shade()
     print("------------------------------")
     vegetable_data_list = [

@@ -2,7 +2,7 @@ class Plant:
     """
     A class to simulate a plant and manage its initial characteristics.
     """
-    def __init__(self, name: str, init_h: int, init_age: int):
+    def __init__(self, name: str, init_h: int, init_age: int) -> None:
         """
         Initializes a new Plant instance with its starting values.
 
@@ -15,7 +15,7 @@ class Plant:
         self.init_h = init_h
         self.init_age = init_age
 
-    def get_info(self):
+    def get_info(self) -> None:
         """
         Prints the plant's creation status and initial characteristics.
         """
